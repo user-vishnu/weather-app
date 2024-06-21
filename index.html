@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/weather.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- WEATHER HEADER PART -->
+      <header class="search-box">
+        <!-- Contains input and search icon -->
+        <input
+          type="text"
+          placeholder="Enter your city name..!!"
+          class="input-box"
+        />
+        <button class="fa-solid fa-magnifying-glass" id="search-btn"></button>
+      </header>
+
+      <!-- LOCATION NOT FOUND -->
+      <div class="location-not-found">
+        <h2>Location not found, 😔.</h2>
+        <img src="images/404.png" alt="404 error image" />
+      </div>
+
+      <!-- WEATHER BODY PART-->
+      <main class="weather-body">
+        <p style="font-size: 1.2rem" id="text"></p>
+        <!-- Weather image and weather info -->
+        <img src="images/weather.png" alt="Weather Image" class="weather-img" />
+        <div class="weather-info">
+          <p class="temperature">0<sup>°C</sup></p>
+          <p class="condition"></p>
+        </div>
+
+        <!-- HUMIDITY AND WIND DETAILS -->
+        <section class="weather-details">
+          <!-- HUMIDITY -->
+          <div class="humidity-details">
+            <i class="fa-sharp fa-solid fa-droplet"></i>
+            <div class="text">
+              <span id="humidity"></span>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <!-- WIND -->
+          <div class="wind-details">
+            <i class="fa-solid fa-wind"></i>
+            <div class="text">
+              <span id="wind"></span>
+              <p>Wind</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
